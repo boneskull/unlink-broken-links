@@ -1,6 +1,6 @@
 # unlink-broken-links [![Build Status](https://travis-ci.org/boneskull/unlink-broken-links.svg?branch=master)](https://travis-ci.org/boneskull/unlink-broken-links)
 
-> Find broken symlinks and remove them 
+> Find broken symlinks and destroy them 
 
 ## Install
 
