@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>unlink-broken-links by boneskull</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>unlink-broken-links</h1>
+        <p>Find broken symlinks and destroy them</p>
+
+        <p class="view"><a href="https://github.com/boneskull/unlink-broken-links">View the Project on GitHub <small>boneskull/unlink-broken-links</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/boneskull/unlink-broken-links/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/boneskull/unlink-broken-links/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/boneskull/unlink-broken-links">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="unlink-broken-links-" class="anchor" href="#unlink-broken-links-" aria-hidden="true"><span class="octicon octicon-link"></span></a>unlink-broken-links <a href="https://travis-ci.org/boneskull/unlink-broken-links"><img src="https://travis-ci.org/boneskull/unlink-broken-links.svg?branch=master" alt="Build Status"></a>
+</h1>
+
+<blockquote>
+<p>Find broken symlinks and destroy them </p>
+</blockquote>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-shell"><pre>$ npm install -g unlink-broken-links</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>unlink-broken-links [directory]
+
+Options:
+  --version        Show version number                                 [boolean]
+  --recursive, -r  Recursively walk the directory     [boolean] [default: false]
+  --help, -h       Show help                                           [boolean]
+</code></pre>
+
+<h2>
+<a id="programmatic-api" class="anchor" href="#programmatic-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programmatic API</h2>
+
+<div class="highlight highlight-js"><pre><span class="pl-k">var</span> unlinkBrokenLinks <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>unlink-broken-links<span class="pl-pds">'</span></span>);
+
+<span class="pl-c">// "recursive" defaults to false</span>
+<span class="pl-c1">unlinkBrokenLinks</span>(<span class="pl-s"><span class="pl-pds">'</span>/some/path<span class="pl-pds">'</span></span>, {recursive<span class="pl-k">:</span> <span class="pl-c1">true</span>})
+  .<span class="pl-c1">then</span>(<span class="pl-k">function</span>(<span class="pl-smi">result</span>) {
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(result.<span class="pl-c1">removed</span>); <span class="pl-c">// array of removed files (if any)</span>
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(result.<span class="pl-c1">errors</span>); <span class="pl-c">// array of errors (if any)</span>
+  });
+
+<span class="pl-c">// or callback-style</span>
+<span class="pl-c1">unlinkBrokenLinks</span>(<span class="pl-s"><span class="pl-pds">'</span>/some/path<span class="pl-pds">'</span></span>, {recursive<span class="pl-k">:</span> <span class="pl-c1">true</span>}, <span class="pl-k">function</span>(<span class="pl-smi">err</span>, <span class="pl-smi">result</span>) {
+  <span class="pl-c">// "err" will only be truthy if something's terribly wrong </span>
+  <span class="pl-en">console</span><span class="pl-c1">.log</span>(result.<span class="pl-c1">removed</span>); <span class="pl-c">// array of removed files (if any)</span>
+  <span class="pl-en">console</span><span class="pl-c1">.log</span>(result.<span class="pl-c1">errors</span>); <span class="pl-c">// array of errors (if any)</span>
+});</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>© 2015 <a href="https://boneskull.com">Christopher Hiller</a>.  Licensed MIT.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/boneskull">boneskull</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
