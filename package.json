@@ -35,7 +35,7 @@
     "debug": "^2.2.0",
     "graceful-fs": "^4.1.2",
     "walker": "^1.0.7",
-    "yargs": "^3.15.0"
+    "yargs": "^6.0.0"
   },
   "devDependencies": {
     "chai": "^3.0.0",
